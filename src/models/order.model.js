@@ -24,9 +24,18 @@ const orderSchema = new Schema(
             type: Number,
             required: true
         },
+        amount: {
+            type: Number,
+            required: true
+        },
         payment: {
             type: Schema.Types.ObjectId,
             ref: "Payment"
+        },
+        status: { // created, shipped, delivered, cancel, pending
+            type: Number,
+            default: 1, // created
+            required: true
         }
 
     },

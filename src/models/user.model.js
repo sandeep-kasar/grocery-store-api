@@ -29,7 +29,21 @@ const userSchema = new Schema(
             type: String,
             required: true,
             unique: true,
-            lowecase: true,
+            trim: true, 
+        },
+        address: {
+            type: String,
+            required: false,
+            trim: true, 
+        },
+        latitude: {
+            type: String,
+            required: false,
+            trim: true, 
+        },
+        longitude: {
+            type: String,
+            required: false,
             trim: true, 
         },
         password: {

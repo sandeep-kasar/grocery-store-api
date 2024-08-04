@@ -16,10 +16,12 @@ app.use(cookieParser())
 
 //routes import
 import userRouter from './routes/user.routes.js'
+import orderRouter from './routes/order.routes.js'
 
 
 // routes decalration
 app.use("/api/v1/users", userRouter)
+app.use("/api/v1/order", orderRouter)
 
 
 
